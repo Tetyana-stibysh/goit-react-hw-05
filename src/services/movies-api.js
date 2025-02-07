@@ -31,6 +31,6 @@ export const fetchMovieReviews = async (id) => {
   return response.data;
 };
 
-fetchDetailsMovie("402431")
-  .then((response) => console.log(response))
-  .catch((err) => console.error(err));
+// fetchDetailsMovie("402431")
+//   .then((response) => console.log(response))
+//   .catch((err) => console.error(err));
