@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { fetchCastsMovie } from "../../services/movies-api";
+import anonim from "../../assets/transparent-young-icon-boy-icon-avatar-icon-608ae2fe6a9dd1.7209974616197148144367.png";
 
 const MovieCast = () => {
   const { id } = useParams();
@@ -35,9 +36,7 @@ const MovieCast = () => {
           <li key={item.id}>
             <img
               src={
-                item.profile_path
-                  ? `${toPoster}${item.profile_path}`
-                  : "../../../transparent-young-icon-boy-icon-avatar-icon-608ae2fe6a9dd1.7209974616197148144367.png"
+                item.profile_path ? `${toPoster}${item.profile_path}` : anonim
               }
               alt={item.name}
               width="50"
