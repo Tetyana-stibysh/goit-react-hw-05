@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { fetchMovieReviews } from "../../services/movies-api";
-
+import s from "./MovieReviews.module.css";
 const MovieReviews = () => {
   const { id } = useParams();
   const [reviews, setReviews] = useState([]);
@@ -29,13 +29,12 @@ const MovieReviews = () => {
       {error && (
         <p>Whoops, something went wrong! Please try reloading this page!</p>
       )}
-      MovieReviews
       <ul>
         {reviews.length > 0 ? (
           reviews.map(({ author, content, id }) => (
             <li key={id}>
-              <h2>Author: {author}</h2>
-              <p>{content}</p>
+              <h2 className={s.title}>Author: {author}</h2>
+              <p className={s.text}>{content}</p>
             </li>
           ))
         ) : (

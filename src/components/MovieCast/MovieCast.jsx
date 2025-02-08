@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { fetchCastsMovie } from "../../services/movies-api";
 import anonim from "../../assets/transparent-young-icon-boy-icon-avatar-icon-608ae2fe6a9dd1.7209974616197148144367.png";
-
+import s from "./MovieCast.module.css";
 const MovieCast = () => {
   const { id } = useParams();
   const [castMovie, setCastMovie] = useState([]);
@@ -33,7 +33,7 @@ const MovieCast = () => {
       )}
       <ul>
         {castMovie.map((item) => (
-          <li key={item.id}>
+          <li key={item.id} className={s.item}>
             <img
               src={
                 item.profile_path ? `${toPoster}${item.profile_path}` : anonim
@@ -42,8 +42,8 @@ const MovieCast = () => {
               width="50"
               height="80"
             />
-            <h3>{item.name}</h3>
-            <p>Character: {item.character} </p>
+            <h3 className={s.title}>{item.name}</h3>
+            <p className={s.text}>Character: {item.character} </p>
           </li>
         ))}
       </ul>

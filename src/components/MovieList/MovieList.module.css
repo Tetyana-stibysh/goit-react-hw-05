@@ -1,0 +1,12 @@
+.movie {
+  font-size: 18px;
+  margin-left: 32px;
+  color: rgb(61, 61, 61);
+}
+ul {
+  list-style: none;
+}
+
+.link {
+  text-decoration-color: gray;
+}

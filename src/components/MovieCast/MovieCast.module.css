@@ -1,0 +1,17 @@
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+.title {
+  font-size: 13px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.text {
+  font-size: 12px;
+  font-weight: 300;
+  margin: 0;
+}

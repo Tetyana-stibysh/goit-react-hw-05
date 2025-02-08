@@ -1,6 +1,6 @@
 import s from "./SearchBar.module.css";
 
-const SearchBar = ({ getQuery, query }) => {
+const SearchBar = ({ getQuery }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const value = e.target.text.value;

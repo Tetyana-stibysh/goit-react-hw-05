@@ -15,7 +15,6 @@ const MoviesPage = () => {
   const getQuery = (searchedQuery) => {
     searchParams.set("query", searchedQuery);
     setSearchParams(searchParams);
-    // setMoviesSearch([]);
   };
 
   useEffect(() => {
